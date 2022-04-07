@@ -10,9 +10,11 @@ $my-2: 1.5rem auto;
 $m-auto: auto;
 $mx-auto: 0 auto;
 $my-auto: auto 0;
+$my-1: 1rem auto;
 
 // Spacing
 $space-md: 5.2rem;
-$space-xs: 10px
+$space-xs: 10px;
+$space-sm: $space-xs * 2;
 
 // border

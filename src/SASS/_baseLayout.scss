@@ -17,4 +17,14 @@ body {
     color: $paragraph-color;
     text-align: left;
     width: 100%;
+    left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content {
+    padding-top: 5rem;
 }
