@@ -6,21 +6,36 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
 
     nav {
-        display: none;
+        background-color: $component-bg;
+        position: fixed;
+        top: $space-md;
+        width: 85%;
+        border-radius: $space-xs;
+        transition: 0.5s ease-in-out;
+        
         
         ul {
             list-style: none;
+            width: inherit;
 
             li {
+
                 a {
                     text-decoration: none;
                     color: inherit;
-                }
+                    display: block;
+                    margin: $my-2;
 
-                a:hover {
-                    color: $main-color;
+                    &:hover {
+                        border: 2px solid $btn-bg-primary-highlight;
+                        background-color: transparent;
+                        border-radius: 50px;
+                        padding: $space-xs;
+                    }
                 }
             }
         }
@@ -31,17 +46,37 @@ header {
         }
 
         .register {
+            width: 100%;
 
             ul {
+                width: 85%;
                 
                 li {
                     a {
                         text-decoration: none;
                         color: inherit;
                     }
+
+                    &:nth-child(2) {
+
+                        a {
+                            background-color: $btn-bg-primary;
+                            border-radius: 50px;
+                            padding: $space-xs;
+
+                            &:hover {
+                                border: 2px solid $btn-bg-primary-highlight;
+                                background-color: transparent;
+                            }
+                        }
+                    }
                 }
             }
         }
+    }
+
+    .closed {
+        top: -20rem;
     }
 
     .hamburgerMenu {
@@ -51,10 +86,6 @@ header {
             background-color: inherit;
             color: $paragraph-color;
             cursor: pointer;
-
-            .close {
-                display: none;
-            }
 
             svg {
                 transform: scale(2);

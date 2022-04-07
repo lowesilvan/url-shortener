@@ -2,8 +2,12 @@ import React from 'react'
 import logo from '../../Assets/images/logo.svg'
 import Hamburger from '../../Components/Header/Hamburger'
 import CloseIcon from '../../Components/Header/CloseIcon'
+import { useState } from 'react'
 
 function Header() {
+    const [navOpen, setNavOpen] = useState(false)
+    const ToggleNav = () => setNavOpen(p => !p)
+
     return (
         <header>
             <div>
@@ -11,7 +15,7 @@ function Header() {
                     <img src={logo} alt="logo" />
                 </a>
             </div>
-            <nav>
+            <nav className={`${navOpen ? '' : 'closed'}`}>
                 <ul>
                     <li><a href="/">Features</a></li>
                     <li><a href="/">Pricing</a></li>
@@ -26,9 +30,8 @@ function Header() {
                 </div>
             </nav>
             <div className="hamburgerMenu">
-                <button>
-                    <Hamburger className="menu" />
-                    <CloseIcon className="close" />
+                <button onClick={ToggleNav}>
+                    {navOpen ? <CloseIcon /> : <Hamburger className="menu" />}
                 </button>
             </div>
         </header>
