@@ -1,0 +1,20 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: $base-font-size;
+    outline: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: $base-font-size;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    color: $paragraph-color;
+    text-align: left;
+    width: 100%;
+}

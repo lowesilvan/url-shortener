@@ -1,0 +1,66 @@
+header {
+    color: $white;
+    // background-color: $component-bg;
+    text-align: center;
+    padding: $p-2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+        display: none;
+        
+        ul {
+            list-style: none;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                a:hover {
+                    color: $main-color;
+                }
+            }
+        }
+
+        hr {
+            margin: $mx-2;
+            opacity: 0.3;
+        }
+
+        .register {
+
+            ul {
+                
+                li {
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    .hamburgerMenu {
+
+        button {
+            border: none;
+            background-color: inherit;
+            color: $paragraph-color;
+            cursor: pointer;
+
+            .close {
+                display: none;
+            }
+
+            svg {
+                transform: scale(2);
+            }
+
+
+        }
+    }
+}
