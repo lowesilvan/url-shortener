@@ -1,10 +1,12 @@
 .shorten {
-  margin-top: -2rem;
+  margin-top: -6.6rem;
   text-align: center;
   background: $gray-bg;
+  position: relative;
+  z-index: -1;
 
   @include desktop {
-      margin-top: -1.5rem;
+    margin-top: -5rem;
   }
 
   .link-result {
@@ -21,7 +23,10 @@
     }
 
     &:first-child {
-      padding-top: 8rem;
+      padding-top: 6rem;
+      @include desktop {
+        padding-top: 5rem;
+      }
     }
 
     .alert {
@@ -98,7 +103,7 @@
   }
 
   .statistics {
-    padding-top: 2rem;
+    padding-top: 7rem;
     @include desktop {
       max-width: 550px;
       margin: auto;
@@ -115,45 +120,97 @@
   }
 
   .feature-section {
+    padding: 1rem;
     @include desktop {
       display: flex;
       justify-content: center;
+      padding: 1rem 3rem;
     }
 
-    .features {
-      margin: 1.3rem;
-      margin-top: 4rem;
-      background-color: $white;
+    .horizontal-line {
+      background-color: $btn-bg-primary-highlight;
+      border: none;
+      height: 6px;
+      width: 8rem;
+      position: relative;
+      z-index: -3;
+      margin: 0 auto;
+      transform: rotate(90deg);
       @include desktop {
-        max-width: 320px;
-        height: fit-content;
+        height: 10rem;
+        width: 6px;
+        background-color: $btn-bg-primary-highlight;
+        border: none;
+        transform: rotate(90deg);
+        margin: auto 0;
+      }
+    }
+
+    .feature-wrapper {
+      padding-bottom: 2rem;
+      @include desktop {
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .image-icon {
         border-radius: 50%;
         width: 85px;
         height: 85px;
-        margin: 0 1rem;
+        margin: auto;
         background-color: $component-bg;
-        display: inline-flex;
         justify-content: center;
         @include desktop {
+          justify-content: start;
+          margin: auto 1.5rem;
         }
 
         img {
           width: 50px;
           height: 50px;
           margin: auto;
+          margin-top: 15px;
         }
       }
-      h3 {
-        font-size: $sub-heading-3;
-        color: $main-color;
-        padding: 0.5rem;
+
+      .features {
+        background-color: $white;
+        margin-top: -2.5rem;
+        position: relative;
+        padding-top: 5rem;
+        z-index: -1;
+        @include desktop {
+          max-width: 350px;
+          height: fit-content;
+          text-align: left;
+        }
+
+        h3 {
+          font-size: $sub-heading-3;
+          color: $main-color;
+          padding: 0.5rem;
+          @include desktop {
+            padding: 0 1rem;
+          }
+        }
+        p {
+          padding: 1.5rem;
+          @include desktop {
+            padding: 1rem;
+          }
+        }
       }
-      p {
-        padding: 1.5rem;
-      }
+    }
+  }
+  .mag-top {
+    @include desktop {
+      margin-top: 2rem;
+    }
+  }
+
+  .mag-top2 {
+    @include desktop {
+      margin-top: 5rem;
     }
   }
 
