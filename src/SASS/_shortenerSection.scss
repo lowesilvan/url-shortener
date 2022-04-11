@@ -1,105 +1,190 @@
 .shorten {
-    margin-top: -5rem;
-    text-align: center;
-    background: $gray-bg;
+  margin-top: -2rem;
+  text-align: center;
+  background: $gray-bg;
 
-    .shorten-link {
-            margin: auto $space-xs;
-            padding: $p-2;
-            background-image: url(../Assets/images/bg-shorten-mobile.svg);
-            background-color: $component-bg;
-            background-repeat: no-repeat;
-            background-size: contain;
-            border-radius: $space-xs;
-            margin-bottom: 2rem;
+  @include desktop {
+      margin-top: -1.5rem;
+  }
 
-            input {
-                width: 100%;
-                border-radius: 7px;
-                color: inherit;
-                padding: 0.7em 1em;
-                margin-bottom: 1rem;
-                border: none;
-                font-size: $small-base;
-
-                &:focus {
-                    border: 1px solid $btn-bg-primary;
-                    color: $main-color;
-                }
-            }
-
-            button {
-                background-color: $btn-bg-primary;
-                border: none;
-                width: 100%;
-                padding: $space-xs;
-                border-radius: 7px;
-                color: $white;
-                margin-top: 2px;
-            }
+  .link-result {
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+    text-align: left;
+    @include desktop {
+      max-width: 1000px;
+      width: 100%;
+      padding: unset;
     }
 
-    .statistics {
-        padding-top: 2rem;
+    &:first-child {
+      padding-top: 8rem;
+    }
 
-        h2 {
-            font-size: $sub-heading-font-size;
-            color: $main-color;
-            padding: 1rem;
+    .alert {
+      background-color: $white;
+      color: rgb(230, 122, 122);
+      padding: 1rem;
+    }
+
+    .result {
+      @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+      }
+      display: flex;
+      flex-direction: column;
+      background-color: $white;
+      padding: 1rem;
+      border-radius: 10px;
+
+      .original-link {
+        color: $main-color;
+      }
+
+      .line {
+        @include desktop {
+          display: none;
         }
-        p {
-            padding: 1rem;
+        margin: 0.7rem 0;
+      }
+
+      .shortened-link {
+        display: flex;
+        align-items: center;
+        color: $btn-bg-primary;
+        flex-direction: column;
+        @include desktop {
+          flex-direction: row;
         }
+        .result-link {
+          width: 100%;
+          padding: 1rem 0;
+        }
+
+        .copy-result {
+          width: 100%;
+          padding: 0.5rem 0;
+        }
+        .copy-btn {
+          background-color: $btn-bg-primary;
+          color: $white;
+          border: none;
+          padding: 1rem 2rem;
+          border-radius: 7px;
+          width: 100%;
+          cursor: pointer;
+          @include desktop {
+            margin: 0 1rem;
+            width: unset;
+            padding: 0.5rem 2rem;
+          }
+
+          &:hover {
+            background-color: $btn-bg-primary-highlight;
+          }
+
+          &:focus {
+            background-color: $component-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .statistics {
+    padding-top: 2rem;
+    @include desktop {
+      max-width: 550px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: $sub-heading-font-size;
+      color: $main-color;
+      padding: 1rem;
+    }
+    p {
+      padding: 1rem;
+    }
+  }
+
+  .feature-section {
+    @include desktop {
+      display: flex;
+      justify-content: center;
     }
 
     .features {
-        margin: 1.3rem;
-        margin-top: 4rem;
-        background-color: $white;
-            
-        .image-icon {
-            border-radius: 50%;
-            width: 85px;
-            height: 85px;
-            margin: auto;
-            background-color: $component-bg;
-            display: inline-flex;
-            justify-content: center;
-        }
-        h3 {
-            font-size: $sub-heading-3;
-            color: $main-color;
-            padding: 0.5rem;
-        }
-        p {
-            padding: 1.5rem;
-        }
-    }
-    .boost {
-        margin-top: 4rem;
-        padding: 4rem 1rem;
-        background-image: url(../Assets/images/bg-boost-mobile.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
+      margin: 1.3rem;
+      margin-top: 4rem;
+      background-color: $white;
+      @include desktop {
+        max-width: 320px;
+        height: fit-content;
+      }
+
+      .image-icon {
+        border-radius: 50%;
+        width: 85px;
+        height: 85px;
+        margin: 0 1rem;
         background-color: $component-bg;
-
-        h3 {
-            color: $white;
-            font-size: $sub-heading-font-size;
-            padding: 1rem 0 1.5rem 0;
+        display: inline-flex;
+        justify-content: center;
+        @include desktop {
         }
-        a {    
-            background-color: $btn-bg-primary;
-            border-radius: 50px;
-            padding: 10px 30px;
-            color: $white;
-            margin-bottom: 2rem;
 
-            &:hover {
-                border: 2px solid $btn-bg-primary-highlight;
-                background-color: transparent;
-                color: inherit;
-            }
+        img {
+          width: 50px;
+          height: 50px;
+          margin: auto;
         }
+      }
+      h3 {
+        font-size: $sub-heading-3;
+        color: $main-color;
+        padding: 0.5rem;
+      }
+      p {
+        padding: 1.5rem;
+      }
     }
+  }
+
+  .boost {
+    margin-top: 4rem;
+    padding: 4rem 1rem;
+    background-image: url(../Assets/images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $component-bg;
+    @include desktop {
+      background-image: url(../Assets/images/bg-boost-desktop.svg);
+    }
+
+    h3 {
+      color: $white;
+      font-size: $sub-heading-font-size;
+      padding: 1rem 0 1.5rem 0;
+    }
+    a {
+      background-color: $btn-bg-primary;
+      border-radius: 50px;
+      padding: 10px 30px;
+      color: $white;
+      margin-bottom: 2rem;
+
+      &:hover {
+        border: 2px solid $btn-bg-primary-highlight;
+        background-color: transparent;
+        color: inherit;
+      }
+    }
+  }
 }

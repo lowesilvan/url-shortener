@@ -1,6 +1,6 @@
 header {
     color: $white;
-    // background-color: $component-bg;
+    background-color: $white;
     text-align: center;
     padding: $p-2;
     display: flex;
@@ -8,8 +8,30 @@ header {
     align-items: center;
     position: fixed;
     width: 100%;
+    font-weight: bold;
+
+    @include desktop {
+        color: $paragraph-color;
+        justify-content: unset;
+        padding: 0 4rem;
+    }
+
+    .site-logo {
+        margin-top: 7px;
+    }
 
     nav {
+        @include desktop{
+            background-color: transparent;
+            position: relative;
+            width: unset;
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+            color: inherit;
+            transition: unset;
+        }
         background-color: $component-bg;
         position: fixed;
         top: $space-md;
@@ -21,15 +43,26 @@ header {
         ul {
             list-style: none;
             width: inherit;
+            @include desktop {
+                display: flex;
+            }
 
             li {
-
+                @include desktop {
+                    margin: 0 1rem;
+                }
                 a {
                     color: inherit;
                     display: block;
                     margin: $my-2;
 
                     &:hover {
+                        @include desktop {
+                            border-radius: unset;
+                            border: unset;
+                            padding: unset;
+                            color: $btn-bg-primary;
+                        }
                         border: 2px solid $btn-bg-primary-highlight;
                         background-color: transparent;
                         border-radius: 50px;
@@ -40,31 +73,57 @@ header {
         }
 
         hr {
+            @include desktop {
+                display: none;
+            }
             margin: $mx-2;
             opacity: 0.3;
         }
 
         .register {
+            @include desktop {
+                display: flex;
+            }
             width: 100%;
 
             ul {
+                @include desktop {
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+
                 width: 85%;
                 
                 li {
                     a {
                         color: inherit;
+
+                        &:hover {
+                           @include desktop {
+                                color: $btn-bg-primary;
+                            } 
+                        }
                     }
 
                     &:nth-child(2) {
 
                         a {
+                            @include desktop {
+                                color: $white;
+                                padding: 0.5rem 1.5rem;
+                            }
                             background-color: $btn-bg-primary;
                             border-radius: 50px;
                             padding: $space-xs;
 
                             &:hover {
+                                @include desktop {
+                                    font-weight: normal;
+                                    border: 1px solid $btn-bg-primary-highlight
+                                }
                                 border: 2px solid $btn-bg-primary-highlight;
                                 background-color: transparent;
+                                color: $main-color;
                             }
                         }
                     }
@@ -74,10 +133,16 @@ header {
     }
 
     .closed {
+        @include desktop {
+            top: unset;
+        }
         top: -20rem;
     }
 
     .hamburgerMenu {
+        @include desktop {
+            display: none;
+        }
 
         button {
             border: none;

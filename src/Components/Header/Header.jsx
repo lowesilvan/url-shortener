@@ -10,7 +10,7 @@ function Header() {
 
     return (
         <header>
-            <div>
+            <div className="site-logo">
                 <a href="/">
                     <img src={logo} alt="logo" />
                 </a>

@@ -1,10 +1,60 @@
 .footer {
     background-color: $very-dark-blue;
     text-align: center;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+
+    .footer-head {
+        @include desktop {
+            width: 20%;
+            justify-content: flex-start;
+            text-align: left;
+        }
+    }
+
+    .footer-grid {
+        @include desktop {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+    }
 
     h1 {
         padding: 2rem;
         color: $white;
         font-size: $sub-heading-font-size;
+    }
+
+    .footer-item {
+
+        h4 {
+            color: $white;
+            padding: 1.5rem;
+        }
+        ul {
+            padding: 0;
+
+            li {
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem;
+        @include desktop {
+            justify-content: left;
+            
+        }
+
+        .footer-icon {
+            padding: 0 0.8rem;
+        }
     }
 }

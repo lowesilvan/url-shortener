@@ -1,0 +1,73 @@
+form {
+  .shorten-link {
+    @include desktop {
+      margin: 0 auto;
+      max-width: 1000px;
+      background-image: url(../Assets/images/bg-shorten-desktop.svg);
+      display: flex;
+      align-items: center;
+    }
+    margin: auto $space-xs;
+    padding: $p-2;
+    background-image: url(../Assets/images/bg-shorten-mobile.svg);
+    background-color: $component-bg;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: $space-xs;
+    margin-bottom: 2rem;
+
+    .input-field {
+      @include desktop {
+        width: 80%;
+        padding: 1rem;
+      }
+      input {
+        width: 100%;
+        border-radius: 7px;
+        color: inherit;
+        padding: 0.7em 1em;
+        margin-bottom: 1rem;
+        border: none;
+        font-size: $small-base;
+        @include desktop {
+          padding: 0.7rem;
+          margin: auto;
+        }
+
+        &:focus {
+          border: 1px solid $btn-bg-primary;
+          color: $main-color;
+        }
+      }
+    }
+
+    .submit-button {
+      @include desktop {
+        width: 20%;
+        padding: 1rem;
+      }
+      button {
+        background-color: $btn-bg-primary;
+        border: none;
+        width: 100%;
+        padding: $space-xs;
+        border-radius: 7px;
+        color: $white;
+        margin-top: 2px;
+        cursor: pointer;
+        @include desktop {
+          margin: auto;
+        }
+
+        &:hover {
+          background-color: $btn-bg-primary-highlight;
+        }
+        &:active {
+          background-color: transparent;
+          border: 2px solid $btn-bg-primary-highlight;
+        }
+      }
+    }
+  }
+}
