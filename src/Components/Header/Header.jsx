@@ -11,7 +11,7 @@ function Header() {
     return (
         <header>
             <div className="site-logo">
-                <a href="#">
+                <a href="/url-shortener">
                     <img src={logo} alt="logo" />
                 </a>
             </div>
