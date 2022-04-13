@@ -58,7 +58,7 @@ function Home() {
       <Header />
       <div className="content">
         <HeroSection />
-        <ShortenLinkSection input={link} setInput={setLink} handleSubmit={handleSubmit} />
+        <ShortenLinkSection input={link} setInput={setLink} handleSubmit={handleSubmit} isPending={isPending} />
         <ShortenerSection isPending={isPending} error={error} shorten={shorten} alert={alert} />
       </div>
       <Footer />

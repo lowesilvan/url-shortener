@@ -33,6 +33,7 @@
       background-color: $white;
       color: rgb(230, 122, 122);
       padding: 1rem;
+      border-radius: 10px;
     }
 
     .result {
@@ -50,6 +51,7 @@
 
       .original-link {
         color: $main-color;
+        flex-wrap: wrap;
       }
 
       .line {
@@ -182,6 +184,7 @@
         margin-top: -2.5rem;
         position: relative;
         padding-top: 5rem;
+        border-radius: 20px;
         @include desktop {
           max-width: 350px;
           height: fit-content;

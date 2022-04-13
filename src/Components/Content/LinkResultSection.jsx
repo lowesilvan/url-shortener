@@ -9,23 +9,23 @@ function LinkResultSection({shorten}) {
     }
 
     return (
-        <div className="link-result">
-            <div className="result">
-                <div className="original-link">
-                    {shorten.original_link}
-                </div>
-                <hr className="line"/>
-                <div className="shortened-link">
-                    <div className="result-link"> {shorten.full_short_link} </div>
-                    <div className="copy-result">
-                        <button className="copy-btn" onClick={handleCopy}>
-                            {copied ? "Copied!" : "Copy"}
-                        </button>
-                    </div>
-                </div>
+      <div className="link-result">
+        <div className="result">
+          <div className="original-link">
+            <p>{shorten.original_link}</p>
+          </div>
+          <hr className="line" />
+          <div className="shortened-link">
+            <div className="result-link"> {shorten.full_short_link} </div>
+            <div className="copy-result">
+              <button className="copy-btn" onClick={handleCopy}>
+                {copied ? "Copied!" : "Copy"}
+              </button>
             </div>
+          </div>
         </div>
-    )
+      </div>
+    );
 }
 
 export default LinkResultSection

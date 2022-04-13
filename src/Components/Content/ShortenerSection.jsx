@@ -7,11 +7,6 @@ import StatisticsSection from "./StatisticsSection";
 function ShortenerSection({ isPending, error, shorten, alert }) {
   return (
     <div className="shorten">
-      {isPending && (
-        <div style={{ paddingTop: "7rem" }}>
-          <h1>Loading</h1>
-        </div>
-      )}
       {error && (
         <div className="link-result">
           <div className="alert">

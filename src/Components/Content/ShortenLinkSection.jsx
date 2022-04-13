@@ -1,6 +1,7 @@
 import React from "react";
+import Spinner from "./Spinner";
 
-function ShortenLinkSection({ input, setInput, handleSubmit}) {
+function ShortenLinkSection({ input, setInput, handleSubmit, isPending}) {
   return (
     <div>
       <form
@@ -18,7 +19,13 @@ function ShortenLinkSection({ input, setInput, handleSubmit}) {
             />
           </div>
           <div className="submit-button">
-            <button>Shorten it!</button>
+            {isPending ? (
+              <span>
+                <Spinner />
+              </span>
+            ) : (
+              <button>Shorten it!</button>
+            )}
           </div>
         </div>
       </form>

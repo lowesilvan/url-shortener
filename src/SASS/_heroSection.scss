@@ -29,6 +29,7 @@ section {
         font-size: $main-heading-font-size;
         color: $main-color;
         margin-top: $space-sm;
+        padding: 0.1rem;
       }
       p {
         @include desktop {
