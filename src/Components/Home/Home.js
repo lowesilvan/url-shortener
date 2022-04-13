@@ -52,7 +52,7 @@ function Home() {
     }
     console.log("log7");
   }
-
+  
   return (
     <div>
       <Header />

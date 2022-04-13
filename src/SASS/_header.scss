@@ -9,6 +9,7 @@ header {
     position: fixed;
     width: 100%;
     font-weight: bold;
+    z-index: 9999;
 
     @include desktop {
         color: $paragraph-color;

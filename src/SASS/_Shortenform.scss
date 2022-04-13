@@ -1,4 +1,6 @@
 form {
+  position: relative;
+  z-index: 2;
   .shorten-link {
     @include desktop {
       margin: 0 auto;

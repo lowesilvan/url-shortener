@@ -1,9 +1,12 @@
 import React from "react";
 
-function ShortenLinkSection({ input, setInput, handleSubmit }) {
+function ShortenLinkSection({ input, setInput, handleSubmit}) {
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        onKeyDown={(e) => e.key === "Enter" && handleSubmit}
+      >
         <div className="shorten-link">
           <div className="input-field">
             <input
@@ -15,7 +18,7 @@ function ShortenLinkSection({ input, setInput, handleSubmit }) {
             />
           </div>
           <div className="submit-button">
-            <button onClick={handleSubmit}>Shorten it!</button>
+            <button>Shorten it!</button>
           </div>
         </div>
       </form>
