@@ -5,7 +5,7 @@ function BoostSection() {
       <div className="boost">
         <h3>Boost your links today</h3>
         <div className="boost-btn">
-          <a href="#">Get Started</a>
+          <a href="/">Get Started</a>
         </div>
       </div>
     );

@@ -17,15 +17,15 @@ function Header() {
             </div>
             <nav className={`${navOpen ? '' : 'closed'}`}>
                 <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Resources</a></li>
+                    <li><a href="/">Features</a></li>
+                    <li><a href="/">Pricing</a></li>
+                    <li><a href="/">Resources</a></li>
                 </ul>
                 <hr />
                 <div className="register">
                     <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="/">Login</a></li>
+                        <li><a href="/">Sign Up</a></li>
                     </ul>
                 </div>
             </nav>
